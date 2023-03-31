@@ -62,11 +62,11 @@ export default function Register() {
     <Container>
       <Header>
         <Heading as="strong"> Bem-vindo ao Ignite Call</Heading>
+        <Text>
+          Precisamos de algumas informaçõe para seu perfil! ah, você pode editar
+          essas informações depois
+        </Text>
       </Header>
-      <Text>
-        Precisamos de algumas informaçõe para seu perfil! ah, você pode editar
-        essas informações depois
-      </Text>
 
       <MultiStep size={4} currentStep={1} />
 
