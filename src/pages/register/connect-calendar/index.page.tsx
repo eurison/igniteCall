@@ -41,7 +41,7 @@ export default function Register() {
             <Button
               variant="secondary"
               size="sm"
-              onClick={() => handleConnectCalendar}
+              onClick={() => handleConnectCalendar()}
             >
               Conectar
               <ArrowRight />
