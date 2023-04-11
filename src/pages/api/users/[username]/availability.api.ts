@@ -52,11 +52,11 @@ export default async function handle(
 
   const possibleTimes = Array.from({ length: endHour - startHour }).map(
     (_, i) => {
-      return startHour + 1
+      return startHour + i
     },
   )
 
-  const blockedTime = await prisma.scheduling.findMany({
+  const blockedTimes = await prisma.scheduling.findMany({
     select: {
       date: true,
     },
@@ -70,7 +70,7 @@ export default async function handle(
   })
 
   const availableTimes = possibleTimes.filter((time) => {
-    return !blockedTime.some(
+    return !blockedTimes.some(
       (blockedTime) => blockedTime.date.getHours() === time,
     )
   })

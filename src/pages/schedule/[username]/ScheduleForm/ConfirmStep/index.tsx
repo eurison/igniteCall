@@ -17,7 +17,7 @@ export function ConfirmStep() {
   const {
     register,
     handleSubmit,
-    formState: { isSubmitted, errors },
+    formState: { isSubmitting, errors },
   } = useForm<ConfirmFormDate>({
     resolver: zodResolver(confirmFormSchema),
   })
@@ -61,10 +61,10 @@ export function ConfirmStep() {
 
       <FormActions>
         <Button type="button" variant="tertiary">
-          Cancelar
+          Cancel
         </Button>
-        <Button type="submit" disabled={isSubmitted}>
-          Confirmar
+        <Button type="submit" disabled={isSubmitting}>
+          Confirm
         </Button>
       </FormActions>
     </ConfirmForm>
