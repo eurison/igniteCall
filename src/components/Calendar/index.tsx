@@ -63,7 +63,7 @@ export function Calendar({ selectedDate, onDateSelected }: CalendarProps) {
       length: firstWeekDay,
     })
       .map((_, i) => {
-        return currentDate.subtract(1, 'day')
+        return currentDate.subtract(i + 1, 'day')
       })
       .reverse()
 
@@ -135,7 +135,7 @@ export function Calendar({ selectedDate, onDateSelected }: CalendarProps) {
         <thead>
           <tr>
             {shortWeekDays.map((weekDay) => (
-              <th key={weekDay}>{weekDay}.</th>
+              <th key={weekDay}>{weekDay}</th>
             ))}
           </tr>
         </thead>

@@ -30,8 +30,8 @@ export const FormHeader = styled('div', {
     gap: '$2',
     // aplica mudana no icone do calendario
     svg: {
-      color: '$gray',
-      width: '$5',
+      color: '$gray200',
+      width: '$50',
       height: '$5',
     },
   },
@@ -45,4 +45,5 @@ export const FormActions = styled('div', {
   display: 'flex',
   justifyContent: 'flex-end',
   gap: '$2',
+  marginTop: '$2',
 })

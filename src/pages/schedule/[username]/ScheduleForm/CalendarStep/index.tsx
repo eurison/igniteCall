@@ -58,6 +58,7 @@ export function CalendarStep() {
           <TimePickerHeader>
             {weekDay} <span> {describedDate}</span>
           </TimePickerHeader>
+
           <TimePickerList>
             {availability?.possibleTimes.map((hour) => {
               return (
